@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-basics';
+  title = 'Test';
+  name = signal('Alberto');
+
+  getName() {
+    return this.name();
+  }
 }
